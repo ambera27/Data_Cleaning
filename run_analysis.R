@@ -1,13 +1,13 @@
 
 #reading and converting raw datasets
-features <- read.csv('~/Dropbox/MSDA_Stuff/summer/Tools_and_Techniques/UCI HAR Dataset/features.txt', header = FALSE, sep = ' ')
+features <- read.csv('./UCI HAR Dataset/features.txt', header = FALSE, sep = ' ')
 features <- as.character(features[,2])
-train.x <- read.table('~/Dropbox/MSDA_Stuff/summer/Tools_and_Techniques/UCI HAR Dataset/train/X_train.txt')
-train.y <- read.csv('~/Dropbox/MSDA_Stuff/summer/Tools_and_Techniques/UCI HAR Dataset/train/y_train.txt', header = FALSE, sep = ' ')
-train.subject <- read.csv('~/Dropbox/MSDA_Stuff/summer/Tools_and_Techniques/UCI HAR Dataset/train/subject_train.txt',header = FALSE, sep = ' ')
-test.x <- read.table('~/Dropbox/MSDA_Stuff/summer/Tools_and_Techniques/UCI HAR Dataset/test/X_test.txt')
-test.y <- read.csv('~/Dropbox/MSDA_Stuff/summer/Tools_and_Techniques/UCI HAR Dataset/test/y_test.txt', header = FALSE, sep = ' ')
-test.subject <- read.csv('~/Dropbox/MSDA_Stuff/summer/Tools_and_Techniques/UCI HAR Dataset/test/subject_test.txt', header = FALSE, sep = ' ')
+train.x <- read.table('./UCI HAR Dataset/train/X_train.txt')
+train.y <- read.csv('./UCI HAR Dataset/train/y_train.txt', header = FALSE, sep = ' ')
+train.subject <- read.csv('./UCI HAR Dataset/train/subject_train.txt',header = FALSE, sep = ' ')
+test.x <- read.table('./UCI HAR Dataset/test/X_test.txt')
+test.y <- read.csv('./UCI HAR Dataset/test/y_test.txt', header = FALSE, sep = ' ')
+test.subject <- read.csv('./UCI HAR Dataset/test/subject_test.txt', header = FALSE, sep = ' ')
 
 
 #combining the 3 training datasets and putting labels on the columns
@@ -33,7 +33,7 @@ har_msd <-har_data[,c(1,2,col.select + 2)]
 
 
 #using descriptive activity names to name the activities in the data set
-labels <- read.table('~/Dropbox/MSDA_Stuff/summer/Tools_and_Techniques/UCI HAR Dataset/activity_labels.txt', header = FALSE)
+labels <- read.table('./UCI HAR Dataset/activity_labels.txt', header = FALSE)
 labels <- as.character(labels[,2])
 har_msd$activity <- labels[har_msd$activity]
 
