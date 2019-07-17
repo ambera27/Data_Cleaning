@@ -1,5 +1,5 @@
 # Human Activity Recognition (HAR) Tidy Data Set processing script in R
-##By Amber Arriaga (amber.arriaga3@gmail.com)
+## By Amber Arriaga (amber.arriaga3@gmail.com)
 
 
 # Project Overview
