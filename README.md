@@ -12,6 +12,8 @@ The R script "run_analysis.R" will essentially run through the following outline
    3) Use descriptive activity names to name the activities in the data set.
    4) Appropriately label the data set with descriptive variable names.
    5) Create a new independent tidy data set with the average of each variable for each activity and each subject.
+   
+The output files from step 4 "har_data.txt" and step 5 "final_data.txt" are also included in the Data_Cleaning folder.  
 
 # References 
 The raw data set and complete description can be found here: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
