@@ -63,6 +63,5 @@ write.table(x = har_msd, file = "har_data.txt", row.names = FALSE)
 write.table(x = tidy_data, file = "final_data.txt", row.names = FALSE)
 
 #generating the codebook for the orginal data
-har_msd
 makeCodebook(har_msd)
 
