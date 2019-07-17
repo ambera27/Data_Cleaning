@@ -1,4 +1,4 @@
-# Human Activity Recognition (HAR) Tidy Data Set processing script in R
+# Tidy Data Set Processing Script in R
   By Amber Arriaga (amber.arriaga3@gmail.com)
 
 
