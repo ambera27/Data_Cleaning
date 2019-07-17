@@ -54,14 +54,15 @@ name.new <- gsub("-", "_", name.new)
 names(har_msd) <- name.new
 
 
-#creating a second, independent tidy data set with the average of each variable for each activity and each subject.
+#creating a tidy data set with the average of each variable for each activity and subject
 tidy_data <- aggregate(har_msd[,3:81], by = list(activity = har_msd$activity, subject = har_msd$subject),FUN = mean)
+
+
+#exporting the outputs from steps 4 and 5 as .txt files
+write.table(x = har_msd, file = "har_data.txt", row.names = FALSE)
 write.table(x = tidy_data, file = "final_data.txt", row.names = FALSE)
 
-
-
-
 #generating the codebook for the orginal data
-final_data <- har_msd
-makeCodebook(final_data)
+har_msd
+makeCodebook(har_msd)
 
